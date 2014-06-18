@@ -4,7 +4,8 @@ var express = require('express'),
     server = require('http').createServer(app),
     fs = require('fs'),
     io = require('socket.io').listen(server);
-
+    
+var newrelic = require('newrelic');
 
 //app.enable('trust proxy')
 io.set('transports', ['xhr-polling']);

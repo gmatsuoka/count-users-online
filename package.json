@@ -13,6 +13,7 @@
         "socket.io": "0.9.16",
         "express": "4.1.1",
         "ejs": "1.0.0",
-        "express-load": "1.1.14"
+        "express-load": "1.1.14",
+        "newrelic": "1.7.2"
     }
 }
