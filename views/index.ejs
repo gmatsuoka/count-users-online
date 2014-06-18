@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+        <title>Teste Users Count</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+
+        <script>
+            $(document).ready(function() {
+              $.ajax({
+                  url: "http://online-users.herokuapp.com/myip",
+                  jsonp: "callback",
+                  dataType: "jsonp",
+                  success: function( response ) {
+                    var socket = io.connect('http://online-users.herokuapp.com:80', {
+                		    resource: "socket.io"
+                		});
+                    
+                    socket.emit("ping", response.ip);
+                  }
+              });
+            });
+
+        </script>
+    </head>
+
+
+    <body>
+
+
+    </body>
+
+
+
+</html>
