@@ -121,5 +121,6 @@ function remove_notify(socket){
   }
 }
 
-//git add . && git commit -m "change" && git push heroku master
+//comandos
+//git add . && git commit -m "change" && git push origin master && git push heroku master
 //https://devcenter.heroku.com/articles/getting-started-with-nodejs
